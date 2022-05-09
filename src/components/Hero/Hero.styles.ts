@@ -1,75 +1,53 @@
 import { createStyles } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
-  root: {
-    backgroundColor: '#11284b',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 25%',
-    backgroundImage:
-      'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(/hero1.jpg)',
-    paddingTop: theme.spacing.xl * 3,
-    paddingBottom: theme.spacing.xl * 3,
+	wrapper:{
+		padding:'30px 0 0 0',
+		margin:0,
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent:'center',
+		alignItems: 'center',
+	},
 
-    borderBottom:'10px lightgreen solid',
+	title:{
+		textAlign:'center',
+		width: '540px',
+    color: theme.colors.dark,
 
-    [theme.fn.smallerThan('md')]: {
-      backgroundPosition: 'center 40%',
-      backgroundImage:
-        'radial-gradient(circle at 130% -10%, rgba(130, 201, 30, 0) -90%, #062343 65%), url(/hero1.jpg)',
-    },
+		[theme.fn.smallerThan('sm')]: {
+			width: 'calc(100% - 120px)',
+      margin: '0 120px',
+    }
+	},
+
+  text__highlight:{
+    color:'white',
+    padding: '0 10px',
+    margin: '2px 5px',
+    display: 'inline-block',
   },
 
-  inner: {
-    display: 'flex',
-    justifyContent: 'space-between',
-
-    [theme.fn.smallerThan('xs')]: {
-      flexDirection: 'column',
-    },
+  background__green:{
+    background: 'linear-gradient(45deg, hsla(140, 100%, 30%, 1), hsla(180, 100%, 40%, 1))',
+  },
+  background__red:{
+    background: 'linear-gradient(45deg, hsla(360, 100%, 50%, 1), hsla(300, 100%, 40%, 1))',
+  },
+  background__blue:{
+    background: 'linear-gradient(45deg, hsla(220, 100%, 60%, 1), hsla(180, 100%, 40%, 1))',
   },
 
-  image: {
-    [theme.fn.smallerThan('xs')]: {
-      display: 'none',
-    },
-  },
-
-  content: {
-    paddingTop: theme.spacing.xl * 2,
-    paddingBottom: theme.spacing.xl * 2,
-    marginRight: theme.spacing.xl * 3,
-
-    [theme.fn.smallerThan('xs')]: {
-      marginRight: 0,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-    },
-  },
-
-  title: {
-    color: theme.white,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    lineHeight: 1.05,
-    maxWidth: 500,
-    fontSize: 48,
-
-    [theme.fn.smallerThan('xs')]: {
-      maxWidth: '100%',
-      fontSize: 34,
-      lineHeight: 1.15,
-    },
-  },
-
-  description: {
-    color: theme.white,
-    opacity: 0.75,
-    maxWidth: 500,
-
-    [theme.fn.smallerThan('xs')]: {
-      maxWidth: '100%',
-    },
+  container__image:{
+    minHeight: '500px',
+    width: '100%',
+    background:
+      'linear-gradient(0deg, hsla(0, 0%, 100%, 1) 50%, hsla(0,0%,100%, 0) 65%), url(/codeBlockSM.png) no-repeat center top',
+    
+    [theme.fn.smallerThan('sm')]: {
+      width: '100%',
+      backgroundSize: '100%',
+    }
   },
 
   control: {
@@ -78,8 +56,16 @@ export const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: 22,
 
+    boxShadow: '0px 0px 20px -4px grey',
+    transition:'500ms ease-in-out',
+
+    '&:hover':{
+      boxShadow: '0px 0px 5px 0px grey',
+      transition:'150ms ease-in-out',
+      transform: 'scale(0.99)',
+    },
+
     [theme.fn.smallerThan('xs')]: {
-      padding:0,
       fontSize: 17,
     },
   },

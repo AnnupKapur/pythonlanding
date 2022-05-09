@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Hero from './components/Hero';
-import Fundamentals from './components/Fundamentals';
 import About from './components/About/About';
 import Contact from './components/Contact';
 import './App.css';
@@ -44,8 +43,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Hero funcBook={funcBook}/>
-      <Fundamentals />
+      <Hero />
       <About />
       <Contact 
         postMsg={saveMessage}
