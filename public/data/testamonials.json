@@ -1,0 +1,58 @@
+{
+	"data":[
+		{
+			"name": "Person A",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person B",
+			"rating": "9",
+			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person C",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person A",
+			"rating": "9",
+			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person B",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person C",
+			"rating": "9",
+			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person A",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person B",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		},
+		{
+			"name": "Person C",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
+			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+		}
+	]
+}

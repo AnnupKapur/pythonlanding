@@ -18,21 +18,27 @@ const About = (props: Props) => {
         <Grid.Col span={3}>a</Grid.Col>
         <Grid.Col span={9}>
           <Grid.Col>
-            <Title>10+ years Software Developer</Title>
+            <Title className={classes.infoTitle}>
+              10+ years Software Developer
+            </Title>
           </Grid.Col>
           <Grid.Col>
-            <Title>15+ years Tutoring</Title>
+            <Title className={classes.infoTitle}>
+              15+ years Tutoring
+            </Title>
           </Grid.Col>
           <Grid.Col>
-            <Title>1000+ Successful Students</Title>
+            <Title className={classes.infoTitle}>
+              1000+ Successful Students
+            </Title>
           </Grid.Col>
         </Grid.Col>
         <Grid.Col span={12}>
-          <Title>My code is being used by</Title>
+          <Title className={classes.subtitle}>My code is being used by</Title>
         </Grid.Col>
-        <Grid.Col span={12}>companies</Grid.Col>
+        <Grid.Col span={12}>.</Grid.Col>
       </Grid>
-    </Container>
+    </Container> 
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStyles } from './Hero.styles'
 import { Title, Text, Button } from '@mantine/core'
+import BookButtons from '../BookButtons'
 
 const Hero = () => {
 	const { classes } = useStyles();
@@ -16,17 +17,14 @@ const Hero = () => {
         <span className={[classes.text__highlight, classes.background__blue].join(' ')}> Software Developer </span>
       </Title>
 
-      <Button
-        variant="gradient"
-        gradient={{ from: 'cyan', to: 'green' }}
-        size="xl"
-        className={classes.control}
-        //onClick={}
-        mt={40}>
-        Book a free 30 minute demo 
-      </Button>
+      <BookButtons
+        bShowBook={true}
+        bShowDemo={true}
+        bShowContact={false}
+      />
 
       <div className={classes.container__image}>
+        <img src={'./codeBlockSM.png'} className={classes.heroImage}/>
       </div>
     </div>
   )

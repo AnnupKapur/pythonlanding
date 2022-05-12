@@ -38,35 +38,43 @@ export const useStyles = createStyles((theme) => ({
     background: 'linear-gradient(45deg, hsla(220, 100%, 60%, 1), hsla(180, 100%, 40%, 1))',
   },
 
-  container__image:{
-    minHeight: '500px',
-    width: '100%',
-    background:
-      'linear-gradient(0deg, hsla(0, 0%, 100%, 1) 50%, hsla(0,0%,100%, 0) 65%), url(/codeBlockSM.png) no-repeat center top',
+  // container__image:{
+  //   minHeight: '500px',
+  //   width: '100%',
+  //   background:
+  //     'linear-gradient(0deg, hsla(0, 0%, 100%, 1) 50%, hsla(0,0%,100%, 0) 65%), url(/codeBlockSM.png) no-repeat center top',
     
-    [theme.fn.smallerThan('sm')]: {
+  //   [theme.fn.smallerThan('sm')]: {
+  //     width: '100%',
+  //     backgroundSize: '100%',
+  //   }
+  // },
+
+  container__image:{
+    width: '100%',
+    display: 'flex',
+    justifyContent:'center',
+    maxHeight:'300px',
+    position: 'relative',
+    overflow:'hidden',
+    top:'-10px',
+    zIndex: 0,
+    '&:before':{
+      content:"''",
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      height:'100%',
+      width:'100%',
+      background: 'linear-gradient(0deg, hsla(0,0%,100%, 1) 0%, hsla(0,0%,100%, 0) 40%)',
+    },
+  },
+
+  heroImage:{
+    height:'100%',
+
+    [theme.fn.smallerThan('sm')]:{
       width: '100%',
-      backgroundSize: '100%',
-    }
-  },
-
-  control: {
-    paddingLeft: 50,
-    paddingRight: 50,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 22,
-
-    boxShadow: '0px 0px 20px -4px grey',
-    transition:'500ms ease-in-out',
-
-    '&:hover':{
-      boxShadow: '0px 0px 5px 0px grey',
-      transition:'150ms ease-in-out',
-      transform: 'scale(0.99)',
     },
-
-    [theme.fn.smallerThan('xs')]: {
-      fontSize: 17,
-    },
-  },
+  }
 }));

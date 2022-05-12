@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hero from './components/Hero';
 import About from './components/About/About';
 import Contact from './components/Contact';
+import Testamonials from './components/Testamonials';
 import './App.css';
 
 import { initializeApp } from 'firebase/app';
@@ -45,10 +46,11 @@ const App = () => {
     <div className="App">
       <Hero />
       <About />
+      <Testamonials />
       <Contact 
         postMsg={saveMessage}
         bDemoBookingClick={bDemoBookingClick}
-        />
+      />
     </div>
   );
 }
