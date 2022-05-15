@@ -33,9 +33,8 @@ const BookButtons = ({
     {(bShowDemo) && (
       <Button
         variant="outline"
-        color='green'
         size="xl"
-        className={classes.btnBook}
+        className={classes.btnBook__outline}
         //onClick={}
         >
         {`:: Free Demo Session ::`}

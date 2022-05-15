@@ -1,23 +1,52 @@
 import { createStyles } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
+
 	wrapper:{
-		padding:'30px 0 0 0',
+		padding:'80px 0 0 0',
 		margin:0,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent:'center',
 		alignItems: 'center',
+    gap: '0px',
+    position: 'relative',
+    zIndex: 10,
+    // backgroundColor: 'hsla(190, 80%, 90%, 0.5)',
+    backgroundColor: 'white',
+
+    '&:before':{
+      content:"''",
+      height: '80vh',
+      position: 'absolute',
+      width: '100%',
+      // backgroundColor: 'white',
+      top: '0px',
+      left: '0px',
+      zIndex: 0,
+      backgroundColor: 'hsla(140, 90%, 80%, 0.5)',
+
+      [theme.fn.smallerThan('sm')]: {
+      height: '100%',
+      }
+    }
 	},
 
 	title:{
-		textAlign:'center',
-		width: '540px',
+		width: '700px',
     color: theme.colors.dark,
+    paddingBottom: '40px',
+    zIndex: 10,
+    fontSize:'40px',
+
+    display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'row wrap',
+
 
 		[theme.fn.smallerThan('sm')]: {
-			width: 'calc(100% - 120px)',
-      margin: '0 120px',
+			width: 'calc(100% - 50px)',
+      fontSize:'30px',
     }
 	},
 
@@ -25,53 +54,36 @@ export const useStyles = createStyles((theme) => ({
     color:'white',
     padding: '0 10px',
     margin: '2px 5px',
-    display: 'inline-block',
+    borderRadius: '5px',
+    zIndex: 10,
+
+    [theme.fn.smallerThan('sm')]: {
+      textAlign: 'center',
+      fontSize: '30px',
+      backgroundColor: 'white',
+    }
   },
 
   background__green:{
-    background: 'linear-gradient(45deg, hsla(140, 100%, 30%, 1), hsla(180, 100%, 40%, 1))',
+    background: 'linear-gradient(45deg, hsla(140, 80%, 45%, 1), hsla(180, 100%, 40%, 1))',
   },
   background__red:{
+    textDecoration:'highlight',
     background: 'linear-gradient(45deg, hsla(360, 100%, 50%, 1), hsla(300, 100%, 40%, 1))',
   },
   background__blue:{
     background: 'linear-gradient(45deg, hsla(220, 100%, 60%, 1), hsla(180, 100%, 40%, 1))',
   },
 
-  // container__image:{
-  //   minHeight: '500px',
-  //   width: '100%',
-  //   background:
-  //     'linear-gradient(0deg, hsla(0, 0%, 100%, 1) 50%, hsla(0,0%,100%, 0) 65%), url(/codeBlockSM.png) no-repeat center top',
-    
-  //   [theme.fn.smallerThan('sm')]: {
-  //     width: '100%',
-  //     backgroundSize: '100%',
-  //   }
-  // },
-
   container__image:{
-    width: '100%',
     display: 'flex',
     justifyContent:'center',
-    maxHeight:'300px',
-    position: 'relative',
-    overflow:'hidden',
-    top:'-10px',
-    zIndex: 0,
-    '&:before':{
-      content:"''",
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      height:'100%',
-      width:'100%',
-      background: 'linear-gradient(0deg, hsla(0,0%,100%, 1) 0%, hsla(0,0%,100%, 0) 40%)',
-    },
+    zIndex: 10,
   },
 
   heroImage:{
-    height:'100%',
+    width:'800px',
+    zIndex: 10,
 
     [theme.fn.smallerThan('sm')]:{
       width: '100%',

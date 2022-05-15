@@ -8,23 +8,24 @@ const Hero = () => {
 
   return (
     <div className={classes.wrapper}>
-      <Title className={classes.title}>
-        Learn
-        <span className={[classes.text__highlight, classes.background__green].join(' ')}> GCSE Python </span>
-        and
-        <span className={[classes.text__highlight, classes.background__red].join(' ')}> Computer Science </span>
-        from a professional
-        <span className={[classes.text__highlight, classes.background__blue].join(' ')}> Software Developer </span>
-      </Title>
+        <Title className={classes.title}>
+          Learn
+          <span className={[classes.text__highlight, classes.background__green].join(' ')}> GCSE Python </span>
+          and
+          <span className={[classes.text__highlight, classes.background__red].join(' ')}> Computer Science </span>
+          from a professional
+          <span className={[classes.text__highlight, classes.background__blue].join(' ')}> Software Developer </span>
+        </Title>
 
-      <BookButtons
-        bShowBook={true}
-        bShowDemo={true}
-        bShowContact={false}
-      />
+        <BookButtons
+          bShowBook={true}
+          bShowDemo={true}
+          bShowContact={false}
+        />
+
 
       <div className={classes.container__image}>
-        <img src={'./codeBlockSM.png'} className={classes.heroImage}/>
+        <img src={'./pizzaCode.png'} className={classes.heroImage}/>
       </div>
     </div>
   )

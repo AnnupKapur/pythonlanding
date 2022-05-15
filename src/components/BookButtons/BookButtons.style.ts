@@ -13,12 +13,17 @@ export const useStyles = createStyles((theme) => ({
 		[theme.fn.smallerThan('sm')]:{
 			flexDirection:'column',
 			alignItems:'center',
+			marginBottom: '50px',
 		}
 	},
 
 	btnBook:{
 		[theme.fn.smallerThan('sm')]:{
-			minWidth: '50%',
 		}
-	}
+	},
+
+	btnBook__outline:{
+		color: 'green',
+		border: '2px solid green',
+	},
 }));

@@ -20,21 +20,6 @@ const FeedbackCard = ({
 }: Props) => {
 	const { classes } = useStyles();
 
-  const funcWrapperSelect = (intOption:number) => {
-    switch(intOption){
-      case 0:
-        return classes.wrapper_red;
-      case 1:
-        return classes.wrapper_blue;
-      case 2:
-        return classes.wrapper_green;
-      case 3:
-        return classes.wrapper_purple;
-      default:
-        return classes.wrapper_grey;
-    }
-  }
-
   const funcGenerateStars = () => {
     let i = 0;
     let arrStars = [];
@@ -42,39 +27,40 @@ const FeedbackCard = ({
     const bHalfStar = (parseInt(strRatingNum)%2)>0 ? true : false;
 
     while(i<intWholeStars){
-      arrStars.push(<IoIosStar />);
+      arrStars.push(<IoIosStar className={classes.star} />);
       i+=1;
     }
 
-    if(bHalfStar){arrStars.push(<IoIosStarHalf />)};
+    if(bHalfStar){arrStars.push(<IoIosStarHalf className={classes.star} />)};
 
     return arrStars;
   }
 
   return (
-  <div 
-  className={[classes.wrapper, funcWrapperSelect(intColorOption)].join(' ')}
-  >
+  <div className={classes.wrapper}>
+    <div className={classes.card}>
+      
+      <div className={classes.top}>
+        <Avatar 
+          src={strPhotoURL} 
+          className={classes.avatar}
+          alt={strName}
+          radius='xl'
+          size='lg'
+        >
+        {(typeof strPhotoURL === "string") && (strName)}
+        </Avatar>
+        <Text size="md" className={classes.text_name}>
+          {strName}
+        </Text>
+      </div>
 
-    <div className="top">
-      <Avatar 
-        src={strPhotoURL} 
-        className={classes.avatar}
-        alt={strName}
-        radius='xl'
-        size='lg'
-      >
-      {(typeof strPhotoURL === "string") && (strName)}
-      </Avatar>      
-      <Text size="md" className={classes.text_name}>
-        {strName}
-      </Text>
+      <div className={classes.content}>
+        <Text size="md" className={classes.text_testamonial}>{strTestamonial}</Text>
+      </div>
+
     </div>
-
-    <div className="content">
-      <Text size="md" className={classes.text_testamonial}>{strTestamonial}</Text>
-    </div>
-
+    
     <div className={classes.bottom}>
       {funcGenerateStars()}
     </div>

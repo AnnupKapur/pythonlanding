@@ -3,46 +3,114 @@ import { createStyles } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
 
 	wrapper:{
+		display: 'flex', 
+		flexDirection:'column', 
+		alignItems:'center'
+	},
+
+	card:{
 		display: 'flex',
 		flexDirection:'column',
-		width: '250px',
-		borderTop: '2px',
-		borderRight: '2px',
-		borderBottom: '5px',
-		borderLeft: '5px',
-	},
-
-
-	// TODO: CONSIDER HSLA FOR THESE COLORS
-	wrapper_red:{
-		borderColor:'red',
-	},
-
-	wrapper_blue:{
-		borderColor:'blue',
-	},
-
-	wrapper_green:{
-		borderColor:'green',
-	},
-
-	wrapper_purple:{
-		borderColor:'purple',
-	},
-
-	wrapper_grey:{
-		borderColor:'grey',
+		width: '220px',
+		// border:'0.5px solid hsla(140, 60%, 60%, 1)',
+		//border:'1px solid hsla(100, 60%, 85%, 1)',
+		borderRadius: '10px 10px 0 0',
+		overflow:'hidden',
+		boxShadow: '5px 5px 20px -10px grey',
+		backgroundColor: 'white',
+		//background: 'linear-gradient(30deg, hsla(140, 90%, 95%, 0.1) 30%, hsla(0, 100%, 100%, 1) 30%)',
 	},
 	
-	top:{},
+	top:{
+		display: 'flex',
+		flexDirection: 'column',
+		padding: '40px 0px 0px 0px',
+		alignItems: 'center',
+		gap: '20px',
+	},
 
-	avatar:{},
+	avatar:{
+		transform: 'scale(1.2)',
+	},
 
-	text_name:{},
+	text_name:{
+		fontSize: '17px',
+		fontWeight: '600',
+		// fontStyle: 'oblique',
+		color:'hsla(150, 50%, 50%, 1)',
+		textAlign: 'center',
+	},
 
-	content:{},
+	content:{
+		margin: '10px 25px 25px 25px',
+		height: '80px',
+		overflow: 'hidden',
+	},
 
-	text_testamonial:{},
+	text_testamonial:{
+		fontSize: '14px',
+		textAlign: 'center',
+		fontStyle: 'oblique',
+		fontWeight: '600',
+		color: 'hsla(0, 0%, 50%, 1)',
+	},
 
-	bottom:{},
+	bottom:{
+		display: 'flex',
+		justifyContent: 'center',
+		padding: '20px 0px',
+		flexDirection: 'row',
+		gap: '10px',
+		//color:'hsla(150, 70%, 50%, 1)',
+		color:'hsla(150, 70%, 95%, 1)',
+		backgroundColor: 'hsla(140, 80%, 45%, 1)',
+		//backgroundColor: 'hsla(140, 70%, 80%, 0.2)',
+		width: '250px',
+    position: 'relative',
+    boxShadow: '0px -5px 20px -12px black, 0px 5px 20px -15px black',
+    borderRadius:'0 0 5px 5px',
+
+    [theme.fn.largerThan('sm')]:{
+      width: '220px',
+      boxShadow: '5px 5px 20px -10px grey',
+    },
+
+    '&:before':{
+      content:"''",
+      display: 'block',
+      position: 'absolute',
+      top:'-15px',
+      left:'0px',
+      width: 0,
+      height: 0,
+      borderBottom: '0px solid transparent',
+      borderTop: '15px solid transparent',
+      borderRight:'15px solid darkgreen', 
+
+      [theme.fn.largerThan('sm')]:{
+        display: 'none',
+      },
+    },
+
+    '&:after':{
+      content:"''",
+      display: 'block',
+      position: 'absolute',
+      top:'-15px',
+      right:'0px',
+      width: 0,
+      height: 0,
+      borderBottom: '0px solid transparent',
+      borderTop: '15px solid transparent',
+      borderLeft:'15px solid darkgreen', 
+
+      [theme.fn.largerThan('sm')]:{
+        display: 'none',
+      },
+    },
+	},
+
+	star:{
+		transform: 'scale(1.5)',
+	}
 }));

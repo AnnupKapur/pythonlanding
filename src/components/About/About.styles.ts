@@ -2,19 +2,14 @@ import { createStyles } from "@mantine/core";
 
 export const useStyles = createStyles((theme) => ({
 	wrapper:{
-		display: 'block',
-		marginTop: '150px',
-		padding:'0',
-		width: '700px',
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		width: '100%',
+		height: '800px',
 	},
 
-	infoTitle:{
-		fontSize: '30px',
-	},
-
-	subtitle:{
-		color:theme.colors.dark,
-		opacity: '0.3',
-		textAlign: 'center',
+	profile__photo__container:{
+		width: '50px',
 	}
 }));
