@@ -27,7 +27,7 @@ const Testamonials = (props: Props) => {
       <div className={classes.cards}>
       {(typeof objTestamonialData === "object") && (
         objTestamonialData.data.map((data:any)=>
-          (objTestamonialData.data.indexOf(data) < 7) && (
+          (objTestamonialData.data.indexOf(data) < 5) && (
           <FeedbackCard
             key={objTestamonialData.data.indexOf(data)}
             strName={data['name']}
