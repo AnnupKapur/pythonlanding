@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Hero from './components/Hero';
-import About from './components/About/About';
-import Contact from './components/Contact';
-import Testamonials from './components/Testamonials';
-import './App.css';
-
-import Homepage from './components/Homepage';
+import Hero from './../Hero';
+import About from './../About';
+import Contact from './../Contact';
+import Testamonials from './../Testamonials';
+import './Homepage.styles.css';
 
 import { initializeApp } from 'firebase/app';
-import { config } from './config/config'
+import { config } from './../../config/config'
 import {
   addDoc, 
   getFirestore,
@@ -18,7 +16,7 @@ import {
 const firebaseAppConfig = config.firebaseConfig;
 initializeApp(firebaseAppConfig);
 
-const App = () => {
+const Homepage = () => {
   const [bDemoBookingClick, setbDemoBookingClick] = useState(false);
 
   const funcBook = () => {
@@ -46,9 +44,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <Homepage />
+      <Hero />
+      <About />
+      <Testamonials />
+      <Contact 
+        postMsg={saveMessage}
+        bDemoBookingClick={bDemoBookingClick}
+      />
     </div>
   );
 }
 
-export default App;
+export default Homepage;
