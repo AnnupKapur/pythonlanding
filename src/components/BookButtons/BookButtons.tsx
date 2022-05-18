@@ -6,12 +6,14 @@ type Props = {
 	bShowDemo: boolean,
 	bShowBook: boolean,
 	bShowContact: boolean,
+  strColor: string,
 }
 
 const BookButtons = ({
 	bShowBook,
 	bShowContact,
-	bShowDemo
+	bShowDemo,
+  strColor
 }: Props) => {
 	const { classes } = useStyles();
 
@@ -22,7 +24,8 @@ const BookButtons = ({
       <Button
         variant="filled"
         size="xl"
-        color='green'
+        // color='green'
+        style={{backgroundColor:strColor}}
         className={classes.btnBook}
         //onClick={}
         >
@@ -34,7 +37,8 @@ const BookButtons = ({
       <Button
         variant="outline"
         size="xl"
-        className={classes.btnBook__outline}
+        style={{color: strColor, border:`2px solid ${strColor}`}}
+        //className={classes.btnBook__outline}
         //onClick={}
         >
         {`:: Free Demo Session ::`}

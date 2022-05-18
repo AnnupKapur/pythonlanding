@@ -8,7 +8,7 @@ export const useStyles = createStyles((theme) => ({
 		alignItems: 'center',
 		width: '100%',
 		minHeight: '800px',
-		paddingTop: '100px',
+    padding: '100px 0px',
 	},
 
 	section_title:{
@@ -54,6 +54,7 @@ export const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     gap:' 10px',
+    padding: '0px 50px',
   },
 
 	profile_text_title:{
@@ -64,30 +65,34 @@ export const useStyles = createStyles((theme) => ({
   profile_text:{
     lineHeight:'2',
 		fontSize: '20px',
+
+    [theme.fn.smallerThan('sm')]:{
+      textAlign: 'left',
+    },
   },
 
   profile_text_highlight_blue_sm:{
 		display: 'inline-block',
     //background: 'linear-gradient(45deg, hsla(220, 100%, 60%, 1), hsla(180, 100%, 40%, 1))',
-		color: 'white',
+    color: 'hsla(200, 80%, 50%, 1)',
 		borderRadius: '5px',
     position: 'relative',
     zIndex: '100',
-    margin: '0px 10px',
+    margin: '0px 15px',
 
     '&:before':{
       content: "''",
       position: 'absolute',
-      top: '0px',
-      left: '-5px',
+      top: '10%',
+      left: '-8px',
       width: '100%',
-      height: '100%',
-      backgroundColor: 'hsla(200, 80%, 50%, 1)',
+      height: '70%',
+      //backgroundColor: 'hsla(200, 80%, 50%, 1)',
       zIndex: '-100',
       color: 'white',
-      boxShadow: '5px 5px 10px -5px lightblue',
-      borderRadius: '5px',
-      padding: '0px 5px',
+      borderRadius: '4px',
+      border: '2px solid hsla(200, 80%, 50%, 1)',
+      padding: '0px 6px',
     },
   },
 
@@ -96,9 +101,13 @@ export const useStyles = createStyles((theme) => ({
   logos_title:{
     margin: '20px 0px',
     fontSize: '25px',
-    fontWeight: '600',
+    fontWeight: '800',
     lineHeight: '1',
     color:'hsla(200, 10%, 70%, 1)',
+
+    [theme.fn.smallerThan('sm')]:{
+      textAlign: 'center',
+    }
   },
 
 	logos:{

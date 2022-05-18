@@ -14,6 +14,7 @@ export const useStyles = createStyles((theme) => ({
 			flexDirection:'column',
 			alignItems:'center',
 			marginBottom: '50px',
+			gap:'20px',
 		}
 	},
 

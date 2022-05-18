@@ -21,6 +21,7 @@ const Hero = () => {
           bShowBook={true}
           bShowDemo={true}
           bShowContact={false}
+          strColor='hsla(120, 50%, 50%, 1)'
         />
 
 
