@@ -66,16 +66,13 @@ export const useStyles = createStyles((theme) => ({
 
   background__green:{
     background: 'linear-gradient(45deg, hsla(140, 80%, 45%, 1), hsla(180, 100%, 40%, 1))',
-    transform: 'rotate(0.4deg)',
   },
   background__red:{
     textDecoration:'highlight',
     background: 'linear-gradient(45deg, hsla(360, 100%, 50%, 1), hsla(300, 100%, 40%, 1))',
-    transform: 'rotate(-0.4deg)',
   },
   background__blue:{
     background: 'linear-gradient(45deg, hsla(220, 100%, 60%, 1), hsla(180, 100%, 40%, 1))',
-    transform: 'rotate(0.5deg)',
   },
 
   container__image:{
