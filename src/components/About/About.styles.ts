@@ -8,13 +8,16 @@ export const useStyles = createStyles((theme) => ({
 		alignItems: 'center',
 		width: '100%',
 		minHeight: '800px',
-    padding: '100px 0px',
+    padding: '50px 0px',
 	},
 
 	section_title:{
 		color: theme.colors.blue,
 		textAlign: 'center',
 		padding: '20px 0px',
+    [theme.fn.smallerThan('sm')]:{
+      fontSize: '30px',
+    },
 	},
 
 	section_title_highlight:{
@@ -55,16 +58,24 @@ export const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     gap:' 10px',
     padding: '0px 50px',
+
+    [theme.fn.smallerThan('sm')]:{
+      padding: '0px 20px',
+    },
   },
 
 	profile_text_title:{
 		fontSize: '20px',
     color: theme.colors.blue,
+
+    [theme.fn.smallerThan('sm')]:{
+      padding: '0px 0px',
+    },
 	},
 
   profile_text:{
     lineHeight:'2',
-		fontSize: '20px',
+		fontSize: '18px',
 
     [theme.fn.smallerThan('sm')]:{
       textAlign: 'left',
