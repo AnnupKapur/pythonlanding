@@ -13,16 +13,16 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { useStyles } from './Contact.styles';
 
 type Props = {
+  nstrMsgID: string | null;
   postMsg:(
     name:string,
     phone: string,
     email: string,
     comments:string,
   ) => void;
-  bDemoBookingClick:boolean,
 }
 
-const Contact = ({postMsg, bDemoBookingClick}:Props) => {
+const Contact = ({postMsg, nstrMsgID}:Props) => {
   const { classes } = useStyles();
   const [strInputName, setstrInputName] = useState('');
   const [strInputPhone, setstrInputPhone] = useState('');
@@ -67,11 +67,9 @@ const Contact = ({postMsg, bDemoBookingClick}:Props) => {
     <div id='contact' className={classes.wrapper}>
       <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
         <div>
-          <Title className={classes.title}>{bDemoBookingClick ? 'Free Demo Callback' : 'Contact'}</Title>
+          <Title className={classes.title}>Contact</Title>
           <Text className={classes.description} mt="sm" mb={30}>
-            {bDemoBookingClick ? 
-              'Leave your details and I will get back to you within 24 hours to book your FREE demo session' : 
-              'Leave your details and I will get back to you within 24 hours'}
+            Leave your details and I will get back to you within 24 hours
           </Text>
           <div className={classes.contactDetails}>
 
@@ -93,55 +91,60 @@ const Contact = ({postMsg, bDemoBookingClick}:Props) => {
 
           </div>
         </div>
-        <div className={classes.form}>
-          <TextInput
-            label="Name"
-            placeholder="Your Name"
-            mt="md"
-            required
-            error={bNameError}
-            onChange={(event)=>setstrInputName(event.target.value)}
-            classNames={{ input: classes.input, label: classes.inputLabel }}
-          />
-          <TextInput
-            label="Phone"
-            placeholder="XXXXX-XXXXXX"
-            required
-            mt="md"
-            error={bPhoneError}
-            onChange={(event)=>setstrInputPhone(event.target.value)}
-            classNames={{ input: classes.input, label: classes.inputLabel }}
-          />
-          <TextInput
-            label="Email"
-            placeholder="John Doe"
-            mt="md"
-            onChange={(event)=>setstrInputEmail(event.target.value)}
-            classNames={{ input: classes.input, label: classes.inputLabel }}
-          />
-          <Textarea
-            label="Comment"
-            placeholder="Any comments"
-            minRows={4}
-            mt="md"
-            onChange={(event)=>setstrInputComment(event.target.value)}
-            classNames={{ input: classes.input, label: classes.inputLabel }}
-          />
-          
-          <div className={classes.errorText}>
-            {(bNameError) && (<Text color="red" align='right'>Name is requried</Text>)}
-            {(bPhoneError) && (<Text color="red" align='right'>Phone number is requried</Text>)}
-          </div>
 
-          <Group position="right" mt="md">
-            <Button 
-              className={classes.control}
-              onClick={()=>funcCheckSubmit()}
-              >
-                Request A Callback
-              </Button>
-          </Group>
-        </div>
+        {/* THE FORM */}
+        {(!nstrMsgID) && (
+          <div className={classes.form}>
+            <TextInput
+              label="Name"
+              placeholder="Your Name"
+              mt="md"
+              required
+              error={bNameError}
+              onChange={(event)=>setstrInputName(event.target.value)}
+              classNames={{ input: classes.input, label: classes.inputLabel }}
+            />
+            <TextInput
+              label="Phone"
+              placeholder="XXXXX-XXXXXX"
+              required
+              mt="md"
+              error={bPhoneError}
+              onChange={(event)=>setstrInputPhone(event.target.value)}
+              classNames={{ input: classes.input, label: classes.inputLabel }}
+            />
+            <TextInput
+              label="Email"
+              placeholder="John Doe"
+              mt="md"
+              onChange={(event)=>setstrInputEmail(event.target.value)}
+              classNames={{ input: classes.input, label: classes.inputLabel }}
+            />
+            <Textarea
+              label="Comment"
+              placeholder="Any comments"
+              minRows={4}
+              mt="md"
+              onChange={(event)=>setstrInputComment(event.target.value)}
+              classNames={{ input: classes.input, label: classes.inputLabel }}
+            />
+            
+            <div className={classes.errorText}>
+              {(bNameError) && (<Text color="red" align='right'>Name is requried</Text>)}
+              {(bPhoneError) && (<Text color="red" align='right'>Phone number is requried</Text>)}
+            </div>
+
+            <Group position="right" mt="md">
+              <Button 
+                className={classes.control}
+                onClick={()=>funcCheckSubmit()}
+                >
+                  Request A Callback
+                </Button>
+            </Group>
+          </div>
+        )}
+
       </SimpleGrid>
     </div>
   );

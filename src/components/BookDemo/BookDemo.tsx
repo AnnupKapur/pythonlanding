@@ -8,7 +8,12 @@ type Props = {}
 
 const BookDemo = (props: Props) => {
   const { classes } = useStyles();
-  const [dateSelect, setdateSelect] = useState<string | null>();
+  const [nstrDemoDate, setnstrDemoDate] = useState<string | null>();
+  const [nstrStudentName, setnstrStudentName] = useState<string | null>();
+  const [nstrStudentDOB, setnstrStudentDOB] = useState<string | null>();
+  const [nstrParentName, setnstrParentName] = useState<string | null>();
+  const [strPhone, setnstrPhone] = useState<string>();
+  const [strEmail, setstrEmail] = useState<string>();
 
   return (
     <div className={classes.wrapper}>
@@ -21,7 +26,7 @@ const BookDemo = (props: Props) => {
         // STUDENT NAME AND DOB
       }
 
-      {(dateSelect) && (
+      {(nstrDemoDate) && (
         <Input placeholder='John Adams' />
       )}
 

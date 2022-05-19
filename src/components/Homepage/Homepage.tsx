@@ -17,25 +17,24 @@ const firebaseAppConfig = config.firebaseConfig;
 initializeApp(firebaseAppConfig);
 
 const Homepage = () => {
-  const [bDemoBookingClick, setbDemoBookingClick] = useState(false);
 
-  const funcBook = () => {
-    setbDemoBookingClick(true);
-  }
+  const [nstrMsgID, setnstrMsgID] = useState<string | null>(null);
 
-  const saveMessage = async (
+  const funcSendMessage = async (
     name: string,
     phone: string,
     email: string,
     comments: string,
   ) => {
     try {
-      await addDoc(collection(getFirestore(), 'contact'), {
+      const objDocMeta = await addDoc(collection(getFirestore(), 'contact'), {
         Name: name,
         Phone: phone,
         Email: email,
         Comments: comments,
       });
+  
+      setnstrMsgID(objDocMeta.id);
     }
     catch(error) {
       console.error('Error writing new message to Firebase Database', error);
@@ -48,8 +47,8 @@ const Homepage = () => {
       <About />
       <Testamonials />
       <Contact 
-        postMsg={saveMessage}
-        bDemoBookingClick={bDemoBookingClick}
+        postMsg={funcSendMessage}
+        nstrMsgID={nstrMsgID}
       />
     </div>
   );

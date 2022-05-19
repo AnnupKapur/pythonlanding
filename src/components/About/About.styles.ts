@@ -8,7 +8,7 @@ export const useStyles = createStyles((theme) => ({
 		alignItems: 'center',
 		width: '100%',
 		minHeight: '800px',
-    padding: '50px 0px',
+    padding: '50px 0px 100px 0px',
 	},
 
 	section_title:{
