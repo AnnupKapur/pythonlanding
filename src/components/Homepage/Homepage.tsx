@@ -19,6 +19,7 @@ initializeApp(firebaseAppConfig);
 const Homepage = () => {
 
   const [nstrMsgID, setnstrMsgID] = useState<string | null>(null);
+  const [bMsgError, setbMsgError] = useState<boolean>(false);
 
   const funcSendMessage = async (
     name: string,
@@ -32,11 +33,13 @@ const Homepage = () => {
         Phone: phone,
         Email: email,
         Comments: comments,
+        DateTime: Date.now(),
       });
   
       setnstrMsgID(objDocMeta.id);
     }
     catch(error) {
+      setbMsgError(true);
       console.error('Error writing new message to Firebase Database', error);
     }
   }
@@ -49,6 +52,9 @@ const Homepage = () => {
       <Contact 
         postMsg={funcSendMessage}
         nstrMsgID={nstrMsgID}
+        setnstrMsgID={setnstrMsgID}
+        bMsgError={bMsgError}
+        setbMsgError={setbMsgError}
       />
     </div>
   );

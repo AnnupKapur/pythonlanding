@@ -8,12 +8,21 @@ import {
   Button,
   Group,
 } from '@mantine/core';
-import { HiOutlinePhone } from 'react-icons/hi';
+import { HiOutlinePhone, HiBadgeCheck } from 'react-icons/hi';
+import { IoReload } from 'react-icons/io5';
 import { MdAlternateEmail } from 'react-icons/md';
+import { VscError } from 'react-icons/vsc';
 import { useStyles } from './Contact.styles';
 
 type Props = {
+  bMsgError: boolean;
+  setbMsgError: (
+    bMsgError:boolean,
+  )=>void;
   nstrMsgID: string | null;
+  setnstrMsgID: (
+    nstrMsgID:string | null,
+  )=>void;
   postMsg:(
     name:string,
     phone: string,
@@ -22,7 +31,13 @@ type Props = {
   ) => void;
 }
 
-const Contact = ({postMsg, nstrMsgID}:Props) => {
+const Contact = ({
+  bMsgError,
+  setbMsgError,
+  postMsg,
+  nstrMsgID,
+  setnstrMsgID
+  }:Props) => {
   const { classes } = useStyles();
   const [strInputName, setstrInputName] = useState('');
   const [strInputPhone, setstrInputPhone] = useState('');
@@ -35,6 +50,15 @@ const Contact = ({postMsg, nstrMsgID}:Props) => {
     setbNameError(false); 
     setbPhoneError(false);
   },[])
+
+  useEffect(()=>{
+    if(nstrMsgID){
+      setstrInputName('');
+      setstrInputPhone('');
+      setstrInputEmail('');
+      setstrInputComment('');
+    }
+  },[nstrMsgID])
 
   useEffect(()=>{
     (strInputName.length>0) && setbNameError(false);
@@ -72,7 +96,12 @@ const Contact = ({postMsg, nstrMsgID}:Props) => {
             Leave your details and I will get back to you within 24 hours
           </Text>
           <div className={classes.contactDetails}>
-
+            <Button onClick={
+              ()=>setnstrMsgID((nstrMsgID) ? null : 'some id')
+            }>Toggle Test</Button>
+            <Button onClick={
+              ()=>setbMsgError(!bMsgError)
+            }>Toggle error</Button>
             <div className={classes.contactOption}>
               <div className={classes.contactIcon}><HiOutlinePhone size={30} /></div>
               <div className={classes.contactOptionDetails}>
@@ -93,13 +122,14 @@ const Contact = ({postMsg, nstrMsgID}:Props) => {
         </div>
 
         {/* THE FORM */}
-        {(!nstrMsgID) && (
+        {(!nstrMsgID && !bMsgError) && (
           <div className={classes.form}>
             <TextInput
               label="Name"
               placeholder="Your Name"
               mt="md"
               required
+              value={strInputName}
               error={bNameError}
               onChange={(event)=>setstrInputName(event.target.value)}
               classNames={{ input: classes.input, label: classes.inputLabel }}
@@ -107,8 +137,9 @@ const Contact = ({postMsg, nstrMsgID}:Props) => {
             <TextInput
               label="Phone"
               placeholder="XXXXX-XXXXXX"
-              required
               mt="md"
+              required
+              value={strInputPhone}
               error={bPhoneError}
               onChange={(event)=>setstrInputPhone(event.target.value)}
               classNames={{ input: classes.input, label: classes.inputLabel }}
@@ -116,6 +147,7 @@ const Contact = ({postMsg, nstrMsgID}:Props) => {
             <TextInput
               label="Email"
               placeholder="John Doe"
+              value={strInputEmail}
               mt="md"
               onChange={(event)=>setstrInputEmail(event.target.value)}
               classNames={{ input: classes.input, label: classes.inputLabel }}
@@ -144,6 +176,50 @@ const Contact = ({postMsg, nstrMsgID}:Props) => {
             </Group>
           </div>
         )}
+
+
+        {(bMsgError) && (
+          <div id='messageSentIndicator' className={
+              [classes.form, classes.messageError].join(' ')
+            }>
+            <div className={classes.messageSent_confirm}>
+              <VscError id='messagesentcheck' className={classes.messageSent_checkmark} size={50}/>
+              <Text>Oh no!</Text>
+              <Text>Message cant send</Text>
+              <Text>Please contact me directly instead</Text>
+            </div>
+            <div className={classes.messageSent_sendNew}>
+              <Button 
+                variant='subtle' 
+                onClick={()=>setbMsgError(false)} 
+                leftIcon={<IoReload />}
+              >
+                Try again
+              </Button>
+            </div>
+          </div>
+        )} 
+
+        {(nstrMsgID) && (
+          <div id='messageSentIndicator' className={
+            [classes.form, classes.messageSent].join(' ')
+          }>
+            <div className={classes.messageSent_confirm}>
+              <HiBadgeCheck id='messagesentcheck' className={classes.messageSent_checkmark} size={50}/>
+              <Text>Thank you for your message !</Text>
+              <Text>I'll get back to you soon</Text>
+            </div>
+            <div className={classes.messageSent_sendNew}>
+              <Button 
+                variant='subtle' 
+                onClick={()=>setnstrMsgID(null)} 
+                leftIcon={<IoReload />}
+              >
+                Send another
+              </Button>
+            </div>
+          </div>
+        )} 
 
       </SimpleGrid>
     </div>
