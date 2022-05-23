@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStyles } from './BookButtons.style'
 import { Title, Text, Button } from '@mantine/core'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
 	bShowDemo: boolean,
@@ -16,6 +17,8 @@ const BookButtons = ({
   strColor
 }: Props) => {
 	const { classes } = useStyles();
+
+  const navigate = useNavigate();
 
   return (
   <div className={classes.wrapper}>
@@ -39,7 +42,9 @@ const BookButtons = ({
         size="xl"
         style={{color: strColor, border:`2px solid ${strColor}`}}
         //className={classes.btnBook__outline}
-        //onClick={}
+        onClick={()=>{
+          navigate('/bookdemo', {replace:true})
+        }}
         >
         {`:: Free Demo Session ::`}
       </Button>
@@ -50,7 +55,6 @@ const BookButtons = ({
         variant="outline"
         size="xl"
         className={classes.btnBook}
-        //onClick={}
         >
           Contact Us
       </Button>

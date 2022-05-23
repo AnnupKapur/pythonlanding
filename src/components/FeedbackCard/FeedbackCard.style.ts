@@ -43,7 +43,7 @@ export const useStyles = createStyles((theme) => ({
 
 	content:{
 		margin: '10px 25px 25px 25px',
-		height: '80px',
+		height: '90px',
 		overflow: 'hidden',
 	},
 
@@ -53,6 +53,7 @@ export const useStyles = createStyles((theme) => ({
 		fontStyle: 'oblique',
 		fontWeight: '600',
 		color: 'hsla(0, 0%, 50%, 1)',
+    lineHeight: '18px',
 	},
 
 	bottom:{
@@ -61,10 +62,8 @@ export const useStyles = createStyles((theme) => ({
 		padding: '20px 0px',
 		flexDirection: 'row',
 		gap: '10px',
-		//color:'hsla(150, 70%, 50%, 1)',
 		color:'hsla(150, 70%, 95%, 1)',
 		backgroundColor: 'hsla(140, 80%, 45%, 1)',
-		//backgroundColor: 'hsla(140, 70%, 80%, 0.2)',
 		width: '250px',
     position: 'relative',
     boxShadow: '0px -5px 20px -12px black, 0px 5px 20px -15px black',

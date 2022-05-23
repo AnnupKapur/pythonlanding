@@ -58,7 +58,7 @@ const Contact = ({
       setstrInputEmail('');
       setstrInputComment('');
     }
-  },[nstrMsgID])
+  },[nstrMsgID, bMsgError])
 
   useEffect(()=>{
     (strInputName.length>0) && setbNameError(false);
@@ -156,6 +156,7 @@ const Contact = ({
               label="Comment"
               placeholder="Any comments"
               minRows={4}
+              value={strInputComment}
               mt="md"
               onChange={(event)=>setstrInputComment(event.target.value)}
               classNames={{ input: classes.input, label: classes.inputLabel }}
@@ -179,11 +180,11 @@ const Contact = ({
 
 
         {(bMsgError) && (
-          <div id='messageSentIndicator' className={
+          <div id='messageErrorIndicator' className={
               [classes.form, classes.messageError].join(' ')
             }>
             <div className={classes.messageSent_confirm}>
-              <VscError id='messagesentcheck' className={classes.messageSent_checkmark} size={50}/>
+              <VscError id='messageerrormark' className={classes.messageSent_checkmark} size={50}/>
               <Text>Oh no!</Text>
               <Text>Message cant send</Text>
               <Text>Please contact me directly instead</Text>

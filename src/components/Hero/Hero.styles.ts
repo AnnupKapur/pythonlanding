@@ -17,7 +17,7 @@ export const useStyles = createStyles((theme) => ({
 
     '&:before':{
       content:"''",
-      height: '80vh',
+      height: '80%',
       position: 'absolute',
       width: '100%',
       // backgroundColor: 'white',
@@ -27,7 +27,7 @@ export const useStyles = createStyles((theme) => ({
       backgroundColor: 'hsla(140, 90%, 80%, 0.5)',
 
       [theme.fn.smallerThan('sm')]: {
-      height: '100%',
+      height: '80%',
       }
     }
 	},
