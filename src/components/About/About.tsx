@@ -5,6 +5,7 @@ import {
   Grid,
   Title,
   Text,
+  Image,
 } from '@mantine/core';
 import BookButtons from '../BookButtons';
 import { HOMEPAGE_ELEMENTS } from './../../constants'
@@ -31,12 +32,28 @@ const About = (props: Props) => {
               <span className={classes.profile_text_highlight_blue_sm}>15 years of tutoring</span>
               experience, I have developed a learning system which is flexible and adapts to the needs the student. My small groups allow me to offer individualised learning while also promoting high quality peer support.
             </Text>
-            <div className={classes.logos}>
-              <div className={classes.logos_title}>
+            <div className={classes.logos_title}>
                 Where are my students studying / working now
               </div>
-            </div>
           </div>
+          <div className={classes.logos}>
+              <img
+                src='./Images/logos/oxford.png'
+                className={classes.logos_img}
+              />
+              <img
+                src='./Images/logos/cambridge.jpg'
+                className={classes.logos_img}
+              />
+              <img
+                src='./Images/logos/uob.png'
+                className={classes.logos_img}
+              />
+              <img
+                src='./Images/logos/eton.jpg'
+                className={classes.logos_img}
+              />
+            </div>
           <div className={classes.profile_content}>
             <Title className={classes.profile_text_title}>To learn from a real software developer</Title>
             <Text className={classes.profile_text}>
@@ -45,11 +62,11 @@ const About = (props: Props) => {
               of experience as a
               <span className={classes.profile_text_highlight_blue_sm}>full stack developer</span>
               , I know the best practices for all aspects of software development, from writing sustainable code, to designing efficient algorithms, I have done it all in a professional setting.</Text>
-            <div className={classes.logos}>
               <div className={classes.logos_title}>
                 Some of the companies using my code *
               </div>
-            </div>
+          </div>
+          <div className={classes.logos}>
           </div>
         </div>
       </div>

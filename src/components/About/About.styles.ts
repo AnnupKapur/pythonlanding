@@ -45,11 +45,11 @@ export const useStyles = createStyles((theme) => ({
 	},
 	
 	profile:{
-		width: '800px',
     display: 'flex',
     flexDirection: 'column',
-    gap: '50px',
+    gap: '0px',
     textAlign: 'center',
+    alignItems: 'center',
 	},
 
 	profile_content:{
@@ -58,9 +58,11 @@ export const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     gap:' 10px',
     padding: '0px 50px',
+    width: '800px',
 
     [theme.fn.smallerThan('sm')]:{
       padding: '0px 20px',
+      width: 'auto',
     },
   },
 
@@ -78,7 +80,7 @@ export const useStyles = createStyles((theme) => ({
 		fontSize: '18px',
 
     [theme.fn.smallerThan('sm')]:{
-      textAlign: 'left',
+      textAlign: 'justify',
     },
   },
 
@@ -110,9 +112,9 @@ export const useStyles = createStyles((theme) => ({
   text_highlight_shadow:{},
 
   logos_title:{
-    margin: '20px 0px',
+    margin: '20px 0px 0px 0px',
     fontSize: '25px',
-    fontWeight: '800',
+    fontWeight: '600',
     lineHeight: '1',
     color:'hsla(200, 10%, 70%, 1)',
 
@@ -121,9 +123,21 @@ export const useStyles = createStyles((theme) => ({
     }
   },
 
-	logos:{
-		height: '100px',
+  logos:{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    gap: '50px',
+    margin: '50px 0px 100px 0px',
+    flexWrap: 'wrap',
 	},
+
+  logos_img:{
+    filter: 'grayscale(100%)',
+    opacity: '0.5',
+    maxHeight: '50px',
+  },
 
 
 }));

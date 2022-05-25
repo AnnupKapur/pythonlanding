@@ -15,12 +15,14 @@ import Contact from './components/Contact';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Homepage />}>
           <Route index element={<Homepage />} />
+          <Route path=':strSection' element={<Homepage />} />
         </Route>
         <Route path='/bookdemo' element={<BookDemo />} />
         <Route path='/confirmation' element={<BookingConfirm />} />

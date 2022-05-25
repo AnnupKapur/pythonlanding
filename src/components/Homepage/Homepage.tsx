@@ -13,15 +13,16 @@ import {
   getFirestore,
   collection
 } from 'firebase/firestore';
+import { useParams } from 'react-router-dom';
 
-type Props = {
-  strScollTo?:string | null;
-}
+type Props = {}
 
 const firebaseAppConfig = config.firebaseConfig;
 initializeApp(firebaseAppConfig);
 
-const Homepage = ({strScollTo=null}:Props) => {
+const Homepage = ({}:Props) => {
+
+  const { strSection } = useParams();
 
   const [nstrMsgID, setnstrMsgID] = useState<string | null>(null);
   const [bMsgError, setbMsgError] = useState<boolean>(false);
@@ -32,7 +33,7 @@ const Homepage = ({strScollTo=null}:Props) => {
   const contactRef = useRef();
 
   useEffect(()=>{
-    switch(strScollTo){
+    switch(strSection){
       case HOMEPAGE_ELEMENTS.HERO:
       default:
         document.getElementById(HOMEPAGE_ELEMENTS.HERO)?.scrollIntoView();
@@ -47,7 +48,7 @@ const Homepage = ({strScollTo=null}:Props) => {
         document.getElementById(HOMEPAGE_ELEMENTS.CONTACT)?.scrollIntoView();
         break;
     }
-  },[strScollTo])
+  },[strSection])
 
   const funcSendMessage = async (
     name: string,
