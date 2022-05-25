@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useStyles } from './Testamonials.style'
 import {Title, Text } from '@mantine/core';
 import FeedbackCard from './../FeedbackCard'
+import { HOMEPAGE_ELEMENTS } from '../../constants';
 
 // @ts-ignore
 import Carousel from '@brainhubeu/react-carousel'
@@ -18,7 +19,7 @@ const Testamonials = (props: Props) => {
   },[])
 
   return (
-    <div className={classes.wrapper}>
+    <div id={HOMEPAGE_ELEMENTS.TESTAMONIALS} className={classes.wrapper}>
       <Title className={classes.text_title}>
         What are other
         <span className={classes.text_highlight}> happy students </span>

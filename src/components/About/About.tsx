@@ -7,6 +7,7 @@ import {
   Text,
 } from '@mantine/core';
 import BookButtons from '../BookButtons';
+import { HOMEPAGE_ELEMENTS } from './../../constants'
 
 type Props = {}
 
@@ -14,7 +15,7 @@ const About = (props: Props) => {
 	const { classes } = useStyles();
 
   return (
-    <div className={classes.wrapper}>
+    <div id={HOMEPAGE_ELEMENTS.ABOUT} className={classes.wrapper}>
       <Title className={classes.section_title}>
         Why
         <span className={classes.section_title_highlight}> choose me </span>?</Title>

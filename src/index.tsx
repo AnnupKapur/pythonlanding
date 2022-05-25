@@ -10,6 +10,7 @@ import './index.css';
 import Homepage from './components/Homepage';
 import BookDemo from './components/BookDemo';
 import BookingConfirm from './components/BookingConfirm';
+import Contact from './components/Contact';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

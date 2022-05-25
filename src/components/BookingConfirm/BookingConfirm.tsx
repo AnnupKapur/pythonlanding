@@ -8,6 +8,7 @@ import {
 import { FaCheckCircle, FaFacebookF, FaTwitter, FaInstagram, FaPhoneAlt} from 'react-icons/fa'
 import { MdAlternateEmail } from 'react-icons/md'
 import { IoHomeSharp } from 'react-icons/io5'
+import { HiOutlineMail } from 'react-icons/hi'
 
 type Props = {}
 
@@ -31,6 +32,7 @@ const BookingConfirm = ({}: Props) => {
       <div className={classes.buttons_icons}>
 
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
+          onClick={()=>window.open('tel:+4407540195785', '_self')}
           sx={(theme)=>({
             backgroundColor: theme.colors.green[5],
             '&:hover':{
@@ -49,7 +51,7 @@ const BookingConfirm = ({}: Props) => {
             },
           }
         )}>
-          <MdAlternateEmail size={20}/>
+          <HiOutlineMail size={25}/>
         </ActionIcon>
 
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize} 

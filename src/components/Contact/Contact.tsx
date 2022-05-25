@@ -13,6 +13,7 @@ import { IoReload } from 'react-icons/io5';
 import { MdAlternateEmail } from 'react-icons/md';
 import { VscError } from 'react-icons/vsc';
 import { useStyles } from './Contact.styles';
+import { HOMEPAGE_ELEMENTS } from '../../constants';
 
 type Props = {
   bMsgError: boolean;
@@ -88,7 +89,7 @@ const Contact = ({
   }
 
   return (
-    <div id='contact' className={classes.wrapper}>
+    <div id={HOMEPAGE_ELEMENTS.CONTACT} className={classes.wrapper}>
       <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
         <div>
           <Title className={classes.title}>Contact</Title>
