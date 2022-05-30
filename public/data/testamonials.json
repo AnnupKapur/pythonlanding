@@ -7,76 +7,52 @@
 			"testamonial": "Annup is an AMAZING teacher!"
 		},
 		{
+			"name": "Person B",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
+			"testamonial": "Juila really enjoyed the lessons. She has just finished her second year of university studying to be a software developer"
+		},
+		{
 			"name": "Markus",
 			"rating": "9",
 			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
-			"testamonial": "I am always looking forward to my Computer Science Lesson with Annup."
+			"testamonial": "My son loves his computer science lessons"
 		},
 		{
 			"name": "Person C",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+			"testamonial": "Niel loves his coding lessons with Mr Kapur - learns so much that school teachers say he is far ahead of the class."
+		},
+		{
+			"name": "Person C",
+			"rating": "10",
+			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
+			"testamonial": "Super teacher, I am predicted a grade 9 for my GCSE now !!! - thanks sir :-)"
 		},
 		{
 			"name": "Person A",
 			"rating": "9",
 			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
-		},
-		{
-			"name": "Person B",
-			"rating": "10",
-			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+			"testamonial": "I cannot thank Annup enough for the help and support through my Computer Science GCSE."
 		},
 		{
 			"name": "Person C",
 			"rating": "9",
 			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+			"testamonial": "Just wanted to say thank you for all the help and support through my GCSEs and ALevels."
 		},
 		{
 			"name": "Person A",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+			"testamonial": "Teacher is awesome - the way he teaches makes evertying so easy to understand."
 		},
 		{
 			"name": "Person B",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
-		},
-		{
-			"name": "Person C",
-			"rating": "10",
-			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
-		},
-		{
-			"name": "Person C",
-			"rating": "10",
-			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
-		},
-		{
-			"name": "Person C",
-			"rating": "10",
-			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
-		},
-		{
-			"name": "Person C",
-			"rating": "10",
-			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
-		},
-		{
-			"name": "Person C",
-			"rating": "10",
-			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque euismod efficitur. Donec id iaculis est."
+			"testamonial": "The learning is really great, Mr Kapur made computer science and coding fun and easy to understand"
 		}
 	]
 }
