@@ -56,7 +56,7 @@ const FeedbackCard = ({
       </div>
 
       <div className={classes.content}>
-        <Text size="md" className={classes.text_testamonial}>{strTestamonial}</Text>
+        <Text size="md" lineClamp={5} className={classes.text_testamonial}>{strTestamonial}</Text>
       </div>
 
     </div>

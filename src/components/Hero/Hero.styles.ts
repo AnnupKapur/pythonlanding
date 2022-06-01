@@ -9,7 +9,7 @@ export const useStyles = createStyles((theme) => ({
 		flexDirection: 'column',
 		justifyContent:'center',
 		alignItems: 'center',
-    gap: '0px',
+    gap: '50px',
     position: 'relative',
     zIndex: 10,
     // backgroundColor: 'hsla(190, 80%, 90%, 0.5)',

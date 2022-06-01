@@ -7,13 +7,11 @@ export const useStyles = createStyles((theme) => ({
 		justifyContent:'center',
 		width: '100%',
 		gap:'10px',
-		marginTop: '50px',
 		zIndex: 50,
 
 		[theme.fn.smallerThan('sm')]:{
 			flexDirection:'column',
 			alignItems:'center',
-			marginBottom: '50px',
 			gap:'20px',
 		}
 	},

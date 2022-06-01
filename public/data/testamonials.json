@@ -1,13 +1,13 @@
 {
 	"data":[
 		{
-			"name": "Jenny",
+			"name": "Jen",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
-			"testamonial": "Annup is an AMAZING teacher!"
+			"testamonial": "Mr Kapur is an AMAZING teacher! I enjoy his classes and homework challenges"
 		},
 		{
-			"name": "Person B",
+			"name": "Micheal",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
 			"testamonial": "Juila really enjoyed the lessons. She has just finished her second year of university studying to be a software developer"
@@ -16,43 +16,43 @@
 			"name": "Markus",
 			"rating": "9",
 			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
-			"testamonial": "My son loves his computer science lessons"
+			"testamonial": "My daughter loved the lessons - helped her get into Cambridge university"
 		},
 		{
-			"name": "Person C",
+			"name": "Mrs Patel",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Niel loves his coding lessons with Mr Kapur - learns so much that school teachers say he is far ahead of the class."
+			"testamonial": "Niel loves his coding lessons with Mr Kapur - he wants to be a software engineer too."
 		},
 		{
-			"name": "Person C",
+			"name": "Mr Watson",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Super teacher, I am predicted a grade 9 for my GCSE now !!! - thanks sir :-)"
+			"testamonial": "Wanted to come back to tell you that Lukas just got accepted for an internship at Google."
 		},
 		{
-			"name": "Person A",
+			"name": "Adam",
 			"rating": "9",
 			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
 			"testamonial": "I cannot thank Annup enough for the help and support through my Computer Science GCSE."
 		},
 		{
-			"name": "Person C",
+			"name": "Heather",
 			"rating": "9",
 			"profilePhoto": "./Images/ProfilePhotos/personC.jpeg",
-			"testamonial": "Just wanted to say thank you for all the help and support through my GCSEs and ALevels."
+			"testamonial": "There were some confusing ALevel computing topics - Sir made the really easy to understand."
 		},
 		{
-			"name": "Person A",
+			"name": "Emily",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personA.jpeg",
-			"testamonial": "Teacher is awesome - the way he teaches makes evertying so easy to understand."
+			"testamonial": "Simply the best computing teacher I have ever had."
 		},
 		{
-			"name": "Person B",
+			"name": "Satveer",
 			"rating": "10",
 			"profilePhoto": "./Images/ProfilePhotos/personB.jpeg",
-			"testamonial": "The learning is really great, Mr Kapur made computer science and coding fun and easy to understand"
+			"testamonial": "The learning is really great, Mr Kapur made computer science and coding fun."
 		}
 	]
 }

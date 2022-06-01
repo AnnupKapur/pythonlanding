@@ -97,17 +97,24 @@ const Contact = ({
             Leave your details and I will get back to you within 24 hours
           </Text>
           <div className={classes.contactDetails}>
-            <Button onClick={
+
+            {/* ONLY FOR TESTING */}
+            {/* <Button onClick={
               ()=>setnstrMsgID((nstrMsgID) ? null : 'some id')
             }>Toggle Test</Button>
             <Button onClick={
               ()=>setbMsgError(!bMsgError)
-            }>Toggle error</Button>
+            }>Toggle error</Button> */}
+
             <div className={classes.contactOption}>
               <div className={classes.contactIcon}><HiOutlinePhone size={30} /></div>
               <div className={classes.contactOptionDetails}>
                 <Title order={4}>Phone</Title>
-                <Text className={classes.contactOptionDetailsBody}>(+44) 07540195785</Text>
+                <Text
+                  onClick={()=> window.open('tel:+4407540195785', '_self')}
+                  className={classes.contactOptionDetailsBody}>
+                  (+44) 07540195785
+                </Text>
               </div>
             </div>
 
@@ -115,7 +122,11 @@ const Contact = ({
               <div className={classes.contactIcon}><MdAlternateEmail size={30} /></div>
               <div className={classes.contactOptionDetails}>
                 <Title order={4}>Email</Title>
-                <Text className={classes.contactOptionDetailsBody}>Annup@Skittles.School</Text>
+                <Text 
+                  onClick={()=> window.open('mailto:Annup@Skittles.School', '_self')}
+                  className={classes.contactOptionDetailsBody}>
+                  Annup@Skittles.School
+                </Text>
               </div>
             </div>
 

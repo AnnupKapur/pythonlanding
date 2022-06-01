@@ -44,6 +44,7 @@ const BookingConfirm = ({}: Props) => {
         </ActionIcon>
         
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
+          onClick={()=>window.open('mailto:Annup@Skittles.School', '_self')}
           sx={(theme)=>({
             backgroundColor: theme.colors.red[6],
             '&:hover':{

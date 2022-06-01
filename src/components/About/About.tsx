@@ -17,24 +17,22 @@ const About = (props: Props) => {
 
   return (
     <div id={HOMEPAGE_ELEMENTS.ABOUT} className={classes.wrapper}>
-      <Title className={classes.section_title}>
-        Why
-        <span className={classes.section_title_highlight}> choose me </span>?</Title>
       <div className={classes.about}>
         <div className={classes.profile_photo}></div>
         <div className={classes.profile}>
           <div className={classes.profile_content}>
-            <Title className={classes.profile_text_title}>
-              For a tutoring tailored to you
+            <Title order={3} className={classes.profile_text_title}>
+              Tutoring 
+              <span className={classes.section_title_highlight}>tailored to you</span>
             </Title>
             <Text className={classes.profile_text}>
               I understand that each and every student learns in their own unique way. In my
               <span className={classes.profile_text_highlight_blue_sm}>15 years of tutoring</span>
-              experience, I have developed a learning system which is flexible and adapts to the needs the student. My small groups allow me to offer individualised learning while also promoting high quality peer support.
+              experience, I have developed a learning system which is flexible and adapts to the needs of every student. My small groups allow me to offer individualised learning while also promoting high quality peer support.
             </Text>
-            <div className={classes.logos_title}>
+            <Title className={classes.logos_title}>
                 Where are my students studying / working now
-              </div>
+            </Title>
           </div>
           <div className={classes.logos}>
               <img
@@ -50,12 +48,19 @@ const About = (props: Props) => {
                 className={classes.logos_img}
               />
               <img
-                src='./Images/logos/eton.jpg'
+                src='./Images/logos/amazon.png'
+                className={classes.logos_img}
+              />
+              <img
+                src='./Images/logos/mslogo.jpg'
                 className={classes.logos_img}
               />
             </div>
           <div className={classes.profile_content}>
-            <Title className={classes.profile_text_title}>To learn from a real software developer</Title>
+            <Title order={3} className={classes.profile_text_title}>
+              Learn from a pro
+              <span className={classes.section_title_highlight}> software developer</span>
+            </Title>
             <Text className={classes.profile_text}>
               Since completing my first class honours degree in computer science, I have been working as a software developer. With 
               <span className={classes.profile_text_highlight_blue_sm}>10+ years</span>
@@ -67,14 +72,29 @@ const About = (props: Props) => {
               </div>
           </div>
           <div className={classes.logos}>
+            <img
+              src='./Images/logos/gousto.png'
+              className={classes.logos_img}
+            />
+            <img
+              src='./Images/logos/gladstonebrookes.png'
+              className={classes.logos_img}
+            />
+            <img
+              src='./Images/logos/o2.png'
+              className={classes.logos_img}
+            />
+            <img
+              src='./Images/logos/optegra.png'
+              className={classes.logos_img}
+            />
+            <img
+              src='./Images/logos/hubenergy.png'
+              className={classes.logos_img}
+            />
           </div>
         </div>
       </div>
-      <BookButtons 
-        bShowBook={true} 
-        bShowDemo={true} 
-        bShowContact={false} 
-        strColor='hsla(200, 80%, 50%, 1)'/>
     </div> 
   )
 }

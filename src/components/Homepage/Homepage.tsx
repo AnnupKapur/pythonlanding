@@ -3,6 +3,7 @@ import Hero from './../Hero';
 import About from './../About';
 import Contact from './../Contact';
 import Testamonials from './../Testamonials';
+import ReadyBanner from '../ReadyBanner';
 import './Homepage.styles.css';
 import { HOMEPAGE_ELEMENTS } from '../../constants';
 
@@ -77,6 +78,7 @@ const Homepage = ({}:Props) => {
     <div className="App">
       <Hero />
       <About />
+      <ReadyBanner strColor='hsla(190, 80%, 45%, 1)'/>
       <Testamonials />
       <Contact 
         postMsg={funcSendMessage}

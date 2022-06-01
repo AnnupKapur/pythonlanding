@@ -8,7 +8,7 @@ export const useStyles = createStyles((theme) => ({
 		alignItems: 'center',
 		width: '100%',
 		minHeight: '800px',
-    padding: '50px 0px 100px 0px',
+    padding: '10px 0px 20px 0px',
 	},
 
 	section_title:{
@@ -67,12 +67,14 @@ export const useStyles = createStyles((theme) => ({
   },
 
 	profile_text_title:{
-		fontSize: '20px',
+		//fontSize: '20px',
     color: theme.colors.blue,
+    padding: '20px 20px',
+    textTransform: 'uppercase',
 
-    [theme.fn.smallerThan('sm')]:{
-      padding: '0px 0px',
-    },
+    // [theme.fn.smallerThan('sm')]:{
+    //   padding: '0px 0px',
+    // },
 	},
 
   profile_text:{
@@ -127,17 +129,23 @@ export const useStyles = createStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    maxWidth:'800px',
     gap: '50px',
     margin: '50px 0px 100px 0px',
     flexWrap: 'wrap',
+    [theme.fn.smallerThan('sm')]:{
+      gap:'30px',
+    },
 	},
 
   logos_img:{
     filter: 'grayscale(100%)',
     opacity: '0.5',
     maxHeight: '50px',
+    [theme.fn.smallerThan('sm')]:{
+      maxWidth: '40vw',
+    },
   },
-
 
 }));
