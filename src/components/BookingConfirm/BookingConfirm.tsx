@@ -1,4 +1,3 @@
-import React from 'react'
 import { useStyles } from './BookingConfirm.style'
 import { 
   Title, 
@@ -6,7 +5,6 @@ import {
   ActionIcon,
 } from '@mantine/core'
 import { FaCheckCircle, FaFacebookF, FaTwitter, FaInstagram, FaPhoneAlt} from 'react-icons/fa'
-import { MdAlternateEmail } from 'react-icons/md'
 import { IoHomeSharp } from 'react-icons/io5'
 import { HiOutlineMail } from 'react-icons/hi'
 import {useNavigate} from 'react-router-dom'
