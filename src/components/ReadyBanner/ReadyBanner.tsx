@@ -25,10 +25,12 @@ const ReadyBanner = ({
         }}
     >
       <div className={classes.title}>
-        <Title order={1} align='center' style={{color:strColor}}>
+        <Title className={classes.titleText} 
+          order={1} align='center' style={{color:strColor}}>
           How does my tutoring help students to achieve such amazing results ?
         </Title>
         <Title order={1} align='center'
+          className={classes.titleText}
           style={{
             color:`hsla(
               ${arrColorInput[0]}, 

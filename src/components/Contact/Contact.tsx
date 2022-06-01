@@ -106,24 +106,24 @@ const Contact = ({
               ()=>setbMsgError(!bMsgError)
             }>Toggle error</Button> */}
 
-            <div className={classes.contactOption}>
+            <div className={classes.contactOption}
+              onClick={()=> window.open('tel:+4407540195785', '_self')}>
               <div className={classes.contactIcon}><HiOutlinePhone size={30} /></div>
               <div className={classes.contactOptionDetails}>
                 <Title order={4}>Phone</Title>
                 <Text
-                  onClick={()=> window.open('tel:+4407540195785', '_self')}
                   className={classes.contactOptionDetailsBody}>
                   (+44) 07540195785
                 </Text>
               </div>
             </div>
 
-            <div className={classes.contactOption}>
+            <div className={classes.contactOption} 
+              onClick={()=> window.open('mailto:Annup@Skittles.School', '_self')}>
               <div className={classes.contactIcon}><MdAlternateEmail size={30} /></div>
               <div className={classes.contactOptionDetails}>
                 <Title order={4}>Email</Title>
                 <Text 
-                  onClick={()=> window.open('mailto:Annup@Skittles.School', '_self')}
                   className={classes.contactOptionDetailsBody}>
                   Annup@Skittles.School
                 </Text>
