@@ -19,21 +19,47 @@ export const useStyles = createStyles((theme) => ({
   title: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
-    padding: '0px 0px 50px 0px',
+    padding: '20px 0px 50px 0px',
     gap: '10px',
 
     [theme.fn.smallerThan('sm')]:{
       fontSize:'20px',
-      padding: '0px 20px 50px 20px',
+      width: '80%',
+      gap: '50px',
+      flexGrow:1,
     }
   },
 
   titleText:{
     [theme.fn.smallerThan('sm')]:{
-      fontSize:'25px',
+      fontSize:'23zpx',
     }
   },
 
+  buttonSection:{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  SubSection:{
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow:1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  titleSubText:{
+    display: 'none',
+
+    [theme.fn.smallerThan('sm')]:{
+      display: 'block',
+      width: '80%',
+      fontSize: '18px',
+      fontWeight: '600',
+    }
+  },
 }));

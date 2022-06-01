@@ -46,7 +46,7 @@ export const useStyles = createStyles((theme) => ({
 
 		[theme.fn.smallerThan('sm')]: {
 			width: 'calc(100% - 50px)',
-      fontSize:'30px',
+      fontSize:'26px',
     }
 	},
 
@@ -59,7 +59,7 @@ export const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan('sm')]: {
       textAlign: 'center',
-      fontSize: '30px',
+      fontSize: '26px',
       backgroundColor: 'white',
     }
   },

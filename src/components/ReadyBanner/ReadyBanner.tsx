@@ -26,11 +26,7 @@ const ReadyBanner = ({
     >
       <div className={classes.title}>
         <Title className={classes.titleText} 
-          order={1} align='center' style={{color:strColor}}>
-          How does my tutoring help students to achieve such amazing results ?
-        </Title>
-        <Title order={1} align='center'
-          className={classes.titleText}
+          order={1} align='center'
           style={{
             color:`hsla(
               ${arrColorInput[0]}, 
@@ -39,15 +35,29 @@ const ReadyBanner = ({
               ${arrColorInput[3]})`
           }}
         >
+          How does my tutoring help students to achieve such amazing results ?
+        </Title>
+        <Title order={1} align='center'
+          className={classes.titleText}
+          style={{color:strColor}}
+        >
           Book a FREE demo session and let me show you
         </Title>
       </div>
-      <BookButtons 
-        bShowBook
-        bShowDemo
-        bShowContact={false}
-        strColor={strColor}
-      />
+      <div className={classes.buttonSection} >
+        <BookButtons 
+          bShowBook
+          bShowDemo
+          bShowContact={false}
+          strColor={strColor}
+        />
+        </div>
+        <div className={classes.SubSection} >
+          <Text className={classes.titleSubText} 
+            align='center' style={{color:strColor}}>
+              Keep scrolling to read what other students say about my teaching
+          </Text>
+        </div>
     </div>
   )
 }

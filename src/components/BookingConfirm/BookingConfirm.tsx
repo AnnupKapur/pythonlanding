@@ -9,6 +9,7 @@ import { FaCheckCircle, FaFacebookF, FaTwitter, FaInstagram, FaPhoneAlt} from 'r
 import { MdAlternateEmail } from 'react-icons/md'
 import { IoHomeSharp } from 'react-icons/io5'
 import { HiOutlineMail } from 'react-icons/hi'
+import {useNavigate} from 'react-router-dom'
 
 type Props = {}
 
@@ -16,19 +17,22 @@ const BookingConfirm = ({}: Props) => {
   const { classes} = useStyles();
   const iconSize = 'xl';
   const iconStyle = 'filled';
+  const navigate = useNavigate();
 
   return (
     <div className={classes.wrapper}>
-      <FaCheckCircle size={60}/>
-      <Title className={classes.text_title}>Booking Confirmed</Title>
-      <Text className={classes.text_content}>
-        <p>
-        Look out for an automated email confirmation in the next few minutes. I will personally follow up via email / phone in the next 24 hours.
-        </p>
-        <p>
-        You can now close this window. If you have any questions, or want to check out my socials, click one of the buttons below.
-        </p>
-      </Text>
+      <div className={classes.content}>
+        <FaCheckCircle className={classes.checkmark} size={60}/>
+        <Title className={classes.text_title}>Booking Confirmed</Title>
+        <Text className={classes.text_content}>
+          <p>
+            Look out for an automated email confirmation in the next few minutes. I will personally follow up via email / phone in the next 24 hours.
+          </p>
+          <p>
+            You can now close this window. If you have any questions, or want to check out my socials, click one of the buttons below.
+          </p>
+        </Text>
+      </div>
       <div className={classes.buttons_icons}>
 
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
@@ -55,15 +59,16 @@ const BookingConfirm = ({}: Props) => {
           <HiOutlineMail size={25}/>
         </ActionIcon>
 
-        <ActionIcon variant={iconStyle} radius='xl' size={iconSize} 
+        <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
           sx={(theme)=>({
-            backgroundColor: theme.colors.blue[6],
+            backgroundColor: theme.colors.yellow[6],
             '&:hover':{
-              backgroundColor: theme.colors.blue[9],
+              backgroundColor: theme.colors.yellow[9],
             },
-          }
-        )}>
-          <FaFacebookF size={20}/>
+          })}
+          onClick={()=> navigate('/', {replace:true})}
+        >
+          <IoHomeSharp size={20}/>
         </ActionIcon>
 
         <ActionIcon  variant={iconStyle} radius='xl' size={iconSize}
@@ -87,17 +92,18 @@ const BookingConfirm = ({}: Props) => {
         )}>
           <FaInstagram size={20}/>
         </ActionIcon>
-        
-        <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
+
+        <ActionIcon variant={iconStyle} radius='xl' size={iconSize} 
           sx={(theme)=>({
-            backgroundColor: theme.colors.yellow[6],
+            backgroundColor: theme.colors.blue[6],
             '&:hover':{
-              backgroundColor: theme.colors.yellow[9],
+              backgroundColor: theme.colors.blue[9],
             },
           }
         )}>
-          <IoHomeSharp size={20}/>
+          <FaFacebookF size={20}/>
         </ActionIcon>
+
       </div>
     </div>
   )

@@ -25,7 +25,7 @@ root.render(
           <Route path=':strSection' element={<Homepage />} />
         </Route>
         <Route path='/bookdemo' element={<BookDemo />} />
-        <Route path='/confirmation' element={<BookingConfirm />} />
+        <Route path='/demoConfirm' element={<BookingConfirm />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
