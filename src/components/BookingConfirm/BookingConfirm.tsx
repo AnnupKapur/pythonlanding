@@ -35,6 +35,7 @@ const BookingConfirm = ({}: Props) => {
       </div>
       <div className={classes.buttons_icons}>
 
+        {/* PHONE */}
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
           onClick={()=>window.open('tel:+4407540195785', '_self')}
           sx={(theme)=>({
@@ -47,6 +48,7 @@ const BookingConfirm = ({}: Props) => {
           <FaPhoneAlt size={20}/>
         </ActionIcon>
         
+        {/* EMAIL */}
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
           onClick={()=>window.open('mailto:Annup@Skittles.School', '_self')}
           sx={(theme)=>({
@@ -59,6 +61,7 @@ const BookingConfirm = ({}: Props) => {
           <HiOutlineMail size={25}/>
         </ActionIcon>
 
+        {/* HOMEPAGE */}
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
           sx={(theme)=>({
             backgroundColor: theme.colors.yellow[6],
@@ -71,7 +74,9 @@ const BookingConfirm = ({}: Props) => {
           <IoHomeSharp size={20}/>
         </ActionIcon>
 
+          {/* TWITTER */}
         <ActionIcon  variant={iconStyle} radius='xl' size={iconSize}
+          onClick={()=>window.open('www.Twitter.com/Annup_Raj', '_self')}
           sx={(theme)=>({
             backgroundColor: theme.colors.blue[3],
             '&:hover':{
@@ -82,7 +87,9 @@ const BookingConfirm = ({}: Props) => {
           <FaTwitter size={20}/>
         </ActionIcon>
         
+        {/* INSTAGRAM */}
         <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
+          onClick={()=>window.open('www.Instagram.com/SkittlesSchool', '_self')}
           sx={(theme)=>({
             backgroundColor: theme.colors.grape[4],
             '&:hover':{
@@ -93,7 +100,9 @@ const BookingConfirm = ({}: Props) => {
           <FaInstagram size={20}/>
         </ActionIcon>
 
-        <ActionIcon variant={iconStyle} radius='xl' size={iconSize} 
+        {/* FACEBOOK */}
+        <ActionIcon variant={iconStyle} radius='xl' size={iconSize}
+          onClick={()=>window.open('www.Facebook.com/SkittlesSchool', '_self')}
           sx={(theme)=>({
             backgroundColor: theme.colors.blue[6],
             '&:hover':{
