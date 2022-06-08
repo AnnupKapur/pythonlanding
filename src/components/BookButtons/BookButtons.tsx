@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStyles } from './BookButtons.style'
-import { Title, Text, Button } from '@mantine/core'
+import { Button } from '@mantine/core'
 import { useNavigate } from 'react-router-dom'
 
 type Props = {
@@ -46,7 +46,7 @@ const BookButtons = ({
           navigate('/bookdemo', {replace:true})
         }}
         >
-        {`:: Free Demo Session ::`}
+        {`:: £1 Demo Session ::`}
       </Button>
     )}
 

@@ -78,7 +78,7 @@ const Homepage = ({}:Props) => {
     <div className="App">
       <Hero />
       <About />
-      <ReadyBanner strColor='hsla(290, 80%, 50%, 1)'/>
+      <ReadyBanner strColor='hsla(20, 90%, 60%, 1)'/>
       <Testamonials />
       <Contact 
         postMsg={funcSendMessage}

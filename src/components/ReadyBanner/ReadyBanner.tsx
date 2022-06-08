@@ -35,13 +35,13 @@ const ReadyBanner = ({
               ${arrColorInput[3]})`
           }}
         >
-          How does my tutoring help students to achieve such amazing results ?
+          Why is my teaching so effective?
         </Title>
         <Title order={1} align='center'
           className={classes.titleText}
           style={{color:strColor}}
         >
-          Book a FREE demo session and let me show you
+          <b>Let me show you in a demo session</b>
         </Title>
       </div>
       <div className={classes.buttonSection} >

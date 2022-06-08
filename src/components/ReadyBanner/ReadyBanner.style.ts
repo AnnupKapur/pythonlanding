@@ -7,7 +7,7 @@ export const useStyles = createStyles((theme) => ({
 		justifyContent: 'flex-start',
 		alignItems: 'center',
 		width: '100%',
-    padding: '100px 0px',
+    padding: '50px 0px 60px 0px',
 
     [theme.fn.smallerThan('sm')]:{
       justifyContent: 'center',
@@ -21,20 +21,22 @@ export const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px 0px 50px 0px',
-    gap: '10px',
+    padding: '0px 0px 50px 0px',
+    gap: '30px',
+    width: '500px',
 
     [theme.fn.smallerThan('sm')]:{
-      fontSize:'20px',
-      width: '80%',
       gap: '50px',
+      width: '60%',
       flexGrow:1,
     }
   },
 
   titleText:{
+    fontSize:'25px',
+    fontWeight: '300',
     [theme.fn.smallerThan('sm')]:{
-      fontSize:'23zpx',
+      fontSize:'25px',
     }
   },
 
