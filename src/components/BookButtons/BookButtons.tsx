@@ -30,9 +30,11 @@ const BookButtons = ({
         // color='green'
         style={{backgroundColor:strColor}}
         className={classes.btnBook}
-        //onClick={}
+        onClick={()=>{
+          navigate('/planSelect', {replace:true})
+        }}
         >
-        {`< Join The Bootcamp />`}
+        {`< Join The Squad />`}
       </Button>
     )}
 

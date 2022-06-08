@@ -10,7 +10,7 @@ import './index.css';
 import Homepage from './components/Homepage';
 import BookDemo from './components/BookDemo';
 import BookingConfirm from './components/BookingConfirm';
-import Contact from './components/Contact';
+import PlanSelect from './components/PlanSelect';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,6 +26,7 @@ root.render(
         </Route>
         <Route path='/bookdemo' element={<BookDemo />} />
         <Route path='/demoConfirm' element={<BookingConfirm />} />
+        <Route path='/planSelect' element={<PlanSelect />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
