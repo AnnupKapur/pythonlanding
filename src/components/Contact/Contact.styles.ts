@@ -41,6 +41,7 @@ export const useStyles = createStyles((theme) => ({
     display:'flex',
     flexDirection:'column',
     justifyContent: 'center',
+    position: 'relative',
   },
 
   messageSent:{

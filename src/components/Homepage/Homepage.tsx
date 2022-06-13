@@ -6,32 +6,15 @@ import Testamonials from './../Testamonials';
 import ReadyBanner from '../ReadyBanner';
 import './Homepage.styles.css';
 import { HOMEPAGE_ELEMENTS } from '../../constants';
-
-import { initializeApp } from 'firebase/app';
-import { config } from './../../config/config'
-import {
-  addDoc, 
-  getFirestore,
-  collection
-} from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
+import { sendMessage } from './../../actions/actionsMessage'
 
-type Props = {}
-
-const firebaseAppConfig = config.firebaseConfig;
-initializeApp(firebaseAppConfig);
-
-const Homepage = ({}:Props) => {
+const Homepage = () => {
 
   const { strSection } = useParams();
 
   const [nstrMsgID, setnstrMsgID] = useState<string | null>(null);
   const [bMsgError, setbMsgError] = useState<boolean>(false);
-
-  const heroRef = useRef();
-  const aboutRef = useRef();
-  const testamonialRef = useRef();
-  const contactRef = useRef();
 
   useEffect(()=>{
     switch(strSection){
@@ -51,27 +34,13 @@ const Homepage = ({}:Props) => {
     }
   },[strSection])
 
-  const funcSendMessage = async (
+  const funcSendMessage = (
     name: string,
-    phone: string,
+    phone: string, 
     email: string,
     comments: string,
   ) => {
-    try {
-      const objDocMeta = await addDoc(collection(getFirestore(), 'contact'), {
-        Name: name,
-        Phone: phone,
-        Email: email,
-        Comments: comments,
-        DateTime: Date.now(),
-      });
-  
-      setnstrMsgID(objDocMeta.id);
-    }
-    catch(error) {
-      setbMsgError(true);
-      console.error('Error writing new message to Firebase Database', error);
-    }
+    sendMessage(name, phone, email, comments, setnstrMsgID, setbMsgError)
   }
 
   return (

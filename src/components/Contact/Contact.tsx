@@ -7,6 +7,7 @@ import {
   Textarea,
   Button,
   Group,
+  LoadingOverlay,
 } from '@mantine/core';
 import { HiOutlinePhone, HiBadgeCheck } from 'react-icons/hi';
 import { IoReload } from 'react-icons/io5';
@@ -46,6 +47,7 @@ const Contact = ({
   const [strInputComment, setstrInputComment] = useState('');
   const [bNameError, setbNameError] = useState(false);
   const [bPhoneError, setbPhoneError] = useState(false);
+  const [bLoading, setbLoading] = useState(false);
 
   useEffect(()=>{
     setbNameError(false); 
@@ -58,6 +60,10 @@ const Contact = ({
       setstrInputPhone('');
       setstrInputEmail('');
       setstrInputComment('');
+    }
+
+    if(nstrMsgID || bMsgError===true){
+      setbLoading(false);
     }
   },[nstrMsgID, bMsgError])
 
@@ -136,6 +142,7 @@ const Contact = ({
         {/* THE FORM */}
         {(!nstrMsgID && !bMsgError) && (
           <div className={classes.form}>
+            <LoadingOverlay visible={bLoading} />
             <TextInput
               label="Name"
               placeholder="Your Name"
@@ -182,7 +189,10 @@ const Contact = ({
             <Group position="right" mt="md">
               <Button 
                 className={classes.control}
-                onClick={()=>funcCheckSubmit()}
+                onClick={() => {
+                  setbLoading(true);
+                  funcCheckSubmit();
+                }}
                 >
                   Request A Callback
                 </Button>

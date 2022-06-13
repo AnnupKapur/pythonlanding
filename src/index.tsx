@@ -6,7 +6,8 @@ import {
   Route,
 } from "react-router-dom";
 import './index.css';
-
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './config/'
 import Homepage from './components/Homepage';
 import BookDemo from './components/BookDemo';
 import BookingConfirm from './components/BookingConfirm';
@@ -15,6 +16,9 @@ import PlanSelect from './components/PlanSelect';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const firebaseAppConfig = firebaseConfig;
+initializeApp(firebaseAppConfig);
 
 root.render(
   <React.StrictMode>
