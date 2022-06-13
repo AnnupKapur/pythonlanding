@@ -39,7 +39,6 @@ export const useStyles = createStyles((theme) => ({
       backgroundColor: 'hsla(150, 90%, 50%, 0.5)',
       boxShadow: '5px 5px 20px -6px black',
       transition: '300ms ease-in-out',
-      // transform: 'translate(-2px, -2px)',
       transform: 'translate(-5px, -5px) scale(1.01)'
     },
   },

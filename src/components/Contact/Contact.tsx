@@ -104,14 +104,6 @@ const Contact = ({
           </Text>
           <div className={classes.contactDetails}>
 
-            {/* ONLY FOR TESTING */}
-            {/* <Button onClick={
-              ()=>setnstrMsgID((nstrMsgID) ? null : 'some id')
-            }>Toggle Test</Button>
-            <Button onClick={
-              ()=>setbMsgError(!bMsgError)
-            }>Toggle error</Button> */}
-
             <div className={classes.contactOption}
               onClick={()=> window.open('tel:+4407540195785', '_self')}>
               <div className={classes.contactIcon}><HiOutlinePhone size={30} /></div>
@@ -200,7 +192,7 @@ const Contact = ({
           </div>
         )}
 
-
+        {/* ERROR */}
         {(bMsgError) && (
           <div id='messageErrorIndicator' className={
               [classes.form, classes.messageError].join(' ')
@@ -208,7 +200,7 @@ const Contact = ({
             <div className={classes.messageSent_confirm}>
               <VscError id='messageerrormark' className={classes.messageSent_checkmark} size={50}/>
               <Text>Oh no!</Text>
-              <Text>Message cant send</Text>
+              <Text>Message was not sent</Text>
               <Text>Please contact me directly instead</Text>
             </div>
             <div className={classes.messageSent_sendNew}>
@@ -223,6 +215,7 @@ const Contact = ({
           </div>
         )} 
 
+        {/* SUCCESSFUL */}
         {(nstrMsgID) && (
           <div id='messageSentIndicator' className={
             [classes.form, classes.messageSent].join(' ')
