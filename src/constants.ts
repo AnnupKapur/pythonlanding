@@ -10,7 +10,12 @@ export const REGISTER_FORM_LOCATION = {
 	BILL_PAYER: 'billPayer',
 }
 
+// export const URL_ENDPOINTS = {
+// 	ZOHO_DOMAIN: 'subscriptions.zoho.eu',
+// 	ZOHO_SUB_OAUTH : 'https://accounts.zoho.eu/oauth/v2/token?',
+// }
+
 export const URL_ENDPOINTS = {
 	ZOHO_DOMAIN: 'subscriptions.zoho.eu',
-	ZOHO_SUB_OAUTH : 'https://accounts.zoho.com/oauth/v2/token',
+	ZOHO_SUB_OAUTH : 'http://localhost:3001/GET_newAccessToken',
 }

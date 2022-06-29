@@ -23,6 +23,7 @@ const BookButtons = ({
   return (
   <div className={classes.wrapper}>
     
+  
     {(bShowBook) && (
       <Button
         variant="filled"
@@ -31,7 +32,7 @@ const BookButtons = ({
         style={{backgroundColor:strColor}}
         className={classes.btnBook}
         onClick={()=>{
-          navigate('/planSelect', {replace:true})
+          navigate('/registration', {replace:true})
         }}
         >
         {`< Join The Squad />`}
@@ -48,7 +49,7 @@ const BookButtons = ({
           navigate('/bookdemo', {replace:true})
         }}
         >
-        {`:: £1 Demo Session ::`}
+        {`:: Free Demo Session ::`}
       </Button>
     )}
 

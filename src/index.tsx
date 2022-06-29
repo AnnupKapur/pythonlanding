@@ -11,7 +11,7 @@ import { firebaseConfig } from './config/'
 import Homepage from './components/Homepage';
 import BookDemo from './components/BookDemo';
 import BookingConfirm from './components/BookingConfirm';
-import PlanSelect from './components/PlanSelect';
+import Registration from './components/Registration';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -30,7 +30,9 @@ root.render(
         </Route>
         <Route path='/bookdemo' element={<BookDemo />} />
         <Route path='/demoConfirm' element={<BookingConfirm />} />
-        <Route path='/planSelect' element={<PlanSelect />} />
+        <Route path='/registration' element={<Registration />}>
+          <Route path=':strStep' element={<Registration />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

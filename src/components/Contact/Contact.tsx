@@ -85,6 +85,7 @@ const Contact = ({
     }
 
     if(strInputName.length>0 && strInputPhone.length>0){
+      setbLoading(true);
       postMsg(
         strInputName,
         strInputPhone,
@@ -182,7 +183,6 @@ const Contact = ({
               <Button 
                 className={classes.control}
                 onClick={() => {
-                  setbLoading(true);
                   funcCheckSubmit();
                 }}
                 >
