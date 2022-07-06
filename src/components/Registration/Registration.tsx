@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Stepper, Button } from '@mantine/core'
+import { Stepper, Button, ActionIcon } from '@mantine/core'
 import { FcMindMap, FcManager, FcApproval } from 'react-icons/fc'
 import { useStyles } from './Registration.style';
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import SessionSelect from './SessionSelect'
 
 /*
 data: {
@@ -37,6 +38,7 @@ type Props = {}
 
 function Registration({}: Props) {
   const {strStep} = useParams();
+  const navigate = useNavigate();
   const intStepPosition = parseInt(strStep||'0');
   const [stepPosition, setstepPosition] = useState(intStepPosition);
   const [strLessonSelect, setstrLessonSelect] = useState<string | null>(null);
@@ -54,19 +56,48 @@ function Registration({}: Props) {
   const { classes } = useStyles();
 
   const objStepClasses = {
+    root: classes.stepperRoot,
+    steps: classes.stepper,
     step: classes.step,
+    stepProgress: classes.stepProgress,
+    separator: classes.step,
+    stepLabel: classes.stepLabel,
+    content: classes.stepContent,
   }
 
   return (
     <div className={classes.wrapper}>
-      <Stepper active={stepPosition} onStepClick={setstepPosition}>
+      <ActionIcon
+        className={classes.closeButton}
+        color="cyan"
+        size="xl"
+        radius="xl"
+        variant="hover"
+        onClick={()=>navigate('/', {replace:true})}
+        >
+        X
+      </ActionIcon>
+      <Stepper
+        active={stepPosition}
+        onStepClick={setstepPosition}
+        classNames={objStepClasses}
+        >
 
         <Stepper.Step
           classNames={objStepClasses}
           label='Select a session'
           allowStepSelect={stepPosition>0}
         >
-          Uno
+          <SessionSelect 
+            strLessonSelect={strLessonSelect}
+            setstrLessonSelect={setstrLessonSelect}
+          />
+
+          {strLessonSelect && (
+          <div className={classes.buttonContainer}>
+            <Button>Confirm Selection</Button>
+          </div>
+          )}
         </Stepper.Step>
 
         <Stepper.Step
@@ -84,7 +115,6 @@ function Registration({}: Props) {
         >
           Uno
         </Stepper.Step>
-
       </Stepper>
     </div>
   )
