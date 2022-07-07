@@ -9,7 +9,9 @@ export const useStyles = createStyles((theme)=>({
 		justifyContent: 'flex-start',
 		maxWidth: '800px',
 		position: 'relative',
-		height: '100%',
+		flexGrow: 1,
+		height: 'calc(100vh - 300px)',
+		overflow: 'scroll',
 	},
 
 	title:{
@@ -29,8 +31,6 @@ export const useStyles = createStyles((theme)=>({
 
 	accordian_itemTitle:{
 		backgroundColor: 'transparent',
-		// width: '30%',
-		// borderRadius: 20,
 	},
 
 	accordian_control:{

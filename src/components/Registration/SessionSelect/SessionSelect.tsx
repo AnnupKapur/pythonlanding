@@ -14,12 +14,22 @@ const SessionSelect = ({
   setstrLessonSelect
 }: Props) => {
   const { classes } = useStyles();
-  // const [sessionIDSelected, setsessionIDSelected] = useState(null);
-  const [state, handlers] = useAccordionState({ 
-      total: 2, 
-      // initialItem: 0, 
-      initialState: {0:true, 1:true} 
-    });
+
+  const arrDays = 
+    SESSIONS
+      .map((objSession) => {return objSession.DAY})
+      .filter((value, index, array) => {return array.indexOf(value) === index});
+
+  const funcCreateInitialState:any = () => {
+    const arrTruth = arrDays.map(()=>true);
+    const length = arrDays.length;
+    return {
+      total: length,
+      initialState: {...arrTruth}
+    }
+  }
+
+  const [state, handlers] = useAccordionState(funcCreateInitialState());
 
   const funcCreateCards = (strDayName:string) => {
     return SESSIONS.map(objSession => {
@@ -45,11 +55,6 @@ const SessionSelect = ({
     // content: classes.accordian_content,
     contentInner: classes.accordian_contentInner,
   }
-
-  const arrDays = 
-    SESSIONS
-      .map((objSession) => {return objSession.DAY})
-      .filter((value, index, array) => {return array.indexOf(value) === index})
 
   return (
     <div className={classes.wrapper}>

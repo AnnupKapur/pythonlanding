@@ -4,6 +4,7 @@ import { FcMindMap, FcManager, FcApproval } from 'react-icons/fc'
 import { useStyles } from './Registration.style';
 import { useParams, useNavigate } from 'react-router-dom'
 import SessionSelect from './SessionSelect'
+import ClientDetails from './ClientDetails'
 
 /*
 data: {
@@ -65,6 +66,19 @@ function Registration({}: Props) {
     content: classes.stepContent,
   }
 
+  const objButtonStyles = {
+    root: classes.buttonRoot,
+  }
+
+  const funcBackButtonAction = () => {
+    // onClick={()=>navigate('/', {replace:true})}
+    if(stepPosition===0){
+      navigate('/', {replace:true})
+    } else{
+      setstepPosition(pos => pos-1)
+    }
+  }
+
   return (
     <div className={classes.wrapper}>
       <ActionIcon
@@ -76,6 +90,17 @@ function Registration({}: Props) {
         onClick={()=>navigate('/', {replace:true})}
         >
         X
+      </ActionIcon>
+
+      <ActionIcon
+        className={classes.backButton}
+        color="cyan"
+        size="xl"
+        radius="xl"
+        variant="hover"
+        onClick={funcBackButtonAction}
+        >
+        {'<'}
       </ActionIcon>
       <Stepper
         active={stepPosition}
@@ -95,17 +120,40 @@ function Registration({}: Props) {
 
           {strLessonSelect && (
           <div className={classes.buttonContainer}>
-            <Button>Confirm Selection</Button>
+            <Button
+              onClick={()=> setstepPosition(pos=>pos+1) }
+              classNames={objButtonStyles}>Confirm Selection</Button>
           </div>
           )}
         </Stepper.Step>
 
         <Stepper.Step
           classNames={objStepClasses}
-          label='Select a session'
+          label='Your Details'
           allowStepSelect={stepPosition>1}
         >
-          Uno
+          <ClientDetails 
+            strSalutation={strSalutation}
+            setstrSalutation={setstrSalutation}
+            strFirstName={strFirstName}
+            setstrFirstName={setstrFirstName}
+            strLastName={strLastName}
+            setstrLastName={setstrLastName}
+            strEmail={strEmail}
+            setstrEmail={setstrEmail}
+            strBillingStreet={strBillingStreet}
+            setstrBillingStreet={strBillingStreet}
+            strBillingCity={strBillingCity}
+            setstrBillingCity={strBillingCity}
+            strBillingZip={strBillingZip}
+            setstrBillingZip={setstrBillingZip}
+            strShippingStreet={strShippingStreet}
+            setstrShippingStreet={setstrShippingStreet}
+            strShippingCity={strShippingCity}
+            setstrShippingCity={setstrShippingCity}
+            strShippingZip={strShippingZip}
+            setstrShippingZip={setstrShippingZip}
+          />
         </Stepper.Step>
 
         <Stepper.Step
