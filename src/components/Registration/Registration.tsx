@@ -46,13 +46,14 @@ function Registration({}: Props) {
   const [strSalutation, setstrSalutation] = useState<string | null>(null);
   const [strFirstName, setstrFirstName] = useState<string | null>(null);
   const [strLastName, setstrLastName] = useState<string | null>(null);
-  const [strEmail, setstrEmail] = useState<string | any>(null);
-  const [strBillingStreet, setstrBillingStreet] = useState<string | any>(null);
-  const [strBillingCity, setstrBillingCity] = useState<string | any>(null);
-  const [strBillingZip, setstrBillingZip] = useState<string | any>(null);
-  const [strShippingStreet, setstrShippingStreet] = useState<string | any>(null);
-  const [strShippingCity, setstrShippingCity] = useState<string | any>(null);
-  const [strShippingZip, setstrShippingZip] = useState<string | any>(null);
+  const [strPhone, setstrPhone] = useState<string | null>(null);
+  const [strEmail, setstrEmail] = useState<string | null>(null);
+  const [strBillingStreet, setstrBillingStreet] = useState<string | null>(null);
+  const [strBillingCity, setstrBillingCity] = useState<string | null>(null);
+  const [strBillingZip, setstrBillingZip] = useState<string | null>(null);
+  const [strShippingStreet, setstrShippingStreet] = useState<string | null>(null);
+  const [strShippingCity, setstrShippingCity] = useState<string | null>(null);
+  const [strShippingZip, setstrShippingZip] = useState<string | null>(null);
 
   const { classes } = useStyles();
 
@@ -139,12 +140,14 @@ function Registration({}: Props) {
             setstrFirstName={setstrFirstName}
             strLastName={strLastName}
             setstrLastName={setstrLastName}
+            strPhone={strPhone}
+            setstrPhone={setstrPhone}
             strEmail={strEmail}
             setstrEmail={setstrEmail}
             strBillingStreet={strBillingStreet}
-            setstrBillingStreet={strBillingStreet}
+            setstrBillingStreet={setstrBillingStreet}
             strBillingCity={strBillingCity}
-            setstrBillingCity={strBillingCity}
+            setstrBillingCity={setstrBillingCity}
             strBillingZip={strBillingZip}
             setstrBillingZip={setstrBillingZip}
             strShippingStreet={strShippingStreet}
